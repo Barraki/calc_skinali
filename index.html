@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<div action="#" id="calc1">
+		<div class="form-holder">
+			<label for="width">Ширина</label>
+			<input type="tel" id="width" name="width" />
+		</div>
+		<div class="form-holder">
+			<label for="heigth">Высота</label>
+			<input type="tel" id="heigth" name="heigth" />
+		</div>
+		<div class="form-holder">
+			<label for="size">м2</label>
+			<input type="tel" id="size" name="size" />
+		</div>
+		<select name="type_window" id="id_type_window">
+			<option value="normal">Обычное</option>
+			<option value="optiwait">Осветленное (Optiwait)</option>
+		</select>
+		<select name="type_install" id="id_type_install">
+			<option value="kley">На клей</option>
+			<option value="holder">На держатель</option>
+		</select>
+		<div class="form-holder">
+			<label for="hydro">Гидрофобный слой</label>
+			<input id="hydro" type="checkbox" />
+		</div>
+		<div class="form-holder">
+			<label for="zamer">Замер</label>
+			<input id="zamer" type="checkbox" />
+		</div>
+		<div class="form-holder">
+			<label for="install">Монтаж</label>
+			<input id="install" type="checkbox" />
+		</div>
+		<div class="form-holder">
+			<label for="shipping">Доставка</label>
+			<input id="shipping" type="checkbox" />
+		</div>
+		<button id="btn-calc">Расчитать</button>
+	</div>
+
+	<span class="result_title">Всего: </span> <span id="result"> 0</span>
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	 crossorigin="anonymous"></script>
+	<script src="main.js"></script>
+</body>
+
+</html>

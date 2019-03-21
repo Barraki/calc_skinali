@@ -1,0 +1,14 @@
+#calc1 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+#calc1 input, #calc1 select {
+	margin: 15px 0;
+}
+
+.result_title, #result {
+	font-size: 50px;
+	font-weight: 800;
+}
