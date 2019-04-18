@@ -9,7 +9,7 @@ $(function () {
       return false
     }
     $('.js-size-panel').append('<div class="form-holder size-panel"><label for="panel">Панель ' + index + ' </label><input type="tel" class="width" name="width" /> <input type="tel" class="heigth" name="heigth" /></div>')
-     console.log(index)
+
   });
 
   $('#calc1 input, #calc1 select').change(function () {
