@@ -1,8 +1,15 @@
 $(function () {
 
-  $('.height').click(function() {
-    $('.size-panel').clone().appendTo('.js-size-panel')
-    // $('.size-panel label').text("Панель" + )
+  $('.js-add-panel').click(function() {
+    var index;
+    $('.size-panel').each(function(){
+      index = $('.size-panel').index(this) + 2
+    })
+    if (index === 11) {
+      return false
+    }
+    $('.js-size-panel').append('<div class="form-holder size-panel"><label for="panel">Панель ' + index + ' </label><input type="tel" class="width" name="width" /> <input type="tel" class="heigth" name="heigth" /></div>')
+     console.log(index)
   });
 
   $('#calc1 input, #calc1 select').change(function () {
@@ -55,68 +62,3 @@ $(function () {
 
 });
 
-
-// var input = prompt("UserNumber");
-// function nextPalindrom(input) {
-  
-//   var i = input;
-//   while(i < 100) {
-//     var i;
-//     var r = ('' + i.split('')).reverse();
-//     i++
-//     console.log(i);
-//     if(i === r) {
-//       break;
-//     }
-//   }
-//   alert('Palindrom next ' + i)
- 
-// }
-
-// nextPalindrom(input)
-
-
-
-
-
-// var condition = (b) => {
-//   var a = +b[0]
-//   var c = +b[b.length - 1]
-//   // console.log(a);
-//   // console.log(c);
-
-
-//   if (a == c) {
-//     console.log("Yes")
-//     return false
-//   } else {
-//     console.log("No")
-//     return true
-//   }
-// }
-
-
-
-// function result(x) {
-
-//   // console.log(x)
-//   // do {
-//   //   x++
-//   //   var b = ('' + x.split(''))
-//   //   console.log(b)
-
-//   // } while (condition(b) && x < 100) {
-//   //   console.log(x)
-//   // }
-
-//   while(x < 100) {
-//     x++
-
-
-//     console.log(x);
-
-//   }
-
-// }
-
-// result(x) 
