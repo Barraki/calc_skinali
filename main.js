@@ -1,22 +1,18 @@
 $(function () {
 
-  $('.js-add-panel').click(function() {
-    var index;
-    $('.size-panel').each(function(){
-      index = $('.size-panel').index(this) + 2
-    })
-    if (index === 11) {
-      return false
-    }
-    $('.js-size-panel').append('<div class="form-holder size-panel"><label for="panel">Панель ' + index + ' </label><input type="tel" class="width" name="width" /> <input type="tel" class="heigth" name="heigth" /></div>')
-
-  });
 
   $('#calc1 input, #calc1 select').change(function () {
+    var width;
+    var heigth;
+    var size;
+    $('.size-panel').each(function () {
+      width = $(".size-panel .width").val() / 100;
+      heigth = $(".size-panel .heigth").val() / 100;
 
-    var width = $(".width").val() / 100;
-    var heigth = $(".heigth").val() / 100;
-    var size = width * heigth;
+    })
+    size = width * heigth;
+    console.log( $('#panel-2 .heigth').val() );
+    
     var price;
     // console.log(size);
 
@@ -57,8 +53,17 @@ $(function () {
   });
 
 
+  $('.js-add-panel').click(function () {
+    var index;
+    $('.size-panel').each(function () {
+      index = $('.size-panel').index(this) + 2
+    })
+    if (index === 11) {
+      return false
+    }
+    $('.js-size-panel').append('<div class="form-holder size-panel"><label for="panel">Панель ' + index + ' </label><input type="tel" class="width" name="width" /> <input type="tel" class="heigth" name="heigth" /></div>')
 
-
+  });
 
 });
 
