@@ -4,7 +4,7 @@ $(function () {
     var width = 0;
     var heigth = 0;
     var size = 0;
-    var price;
+    var price = 0;
 
 
     $('.size-panel').each(function () {
@@ -15,9 +15,7 @@ $(function () {
       size += width / 100 * heigth / 100;
       size.toFixed(2);
     })
-    
-    
-    
+  
 
     if ($("#id_type_window").val() === "optiwait") {
       price = 2750;
